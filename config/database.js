@@ -1,12 +1,12 @@
 const mysql = require("mysql");
 
 const pool = mysql.createPool({
-  host: process.env.DB_HOST,
+  // host: process.env.DB_HOST,
   user: process.env.DB_USER,
   password: process.env.DB_PASS,
   database: process.env.MYSQL_DB,
   connectionLimit: 10,
-//   socketPath: "/Applications/MAMP/tmp/mysql/mysql.sock",
+  //   socketPath: "/Applications/MAMP/tmp/mysql/mysql.sock",
 });
 
 let registration = `CREATE TABLE if not exists registration(
